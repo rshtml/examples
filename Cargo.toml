@@ -1,0 +1,6 @@
+[workspace]
+members = ["snippets"]
+resolver = "2"
+
+[workspace.dependencies]
+rshtml = "*"

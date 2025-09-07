@@ -1,0 +1,6 @@
+[package]
+name = "snippets"
+edition = "2024"
+
+[dependencies]
+rshtml.workspace = true
