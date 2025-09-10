@@ -1,13 +1,14 @@
 use rshtml::{traits::RsHtml, RsHtml};
 
 #[derive(RsHtml)]
-struct ExtendsPage {
+#[rshtml(path = "extends.rs.html")]
+struct LayoutPage {
     value: i32,
     data: String,
     for_escape: String,
 }
 
-impl ExtendsPage {
+impl LayoutPage {
     fn my_func(&self) -> String {
         let mut hold = "Func".to_string();
         hold.push_str(self.data.clone().as_str());
@@ -16,7 +17,7 @@ impl ExtendsPage {
 }
 
 fn main() {
-    let mut page = ExtendsPage {
+    let mut page = LayoutPage {
         value: 10,
         data: "Hello".to_string(),
         for_escape: "'<script/>'".to_string(),

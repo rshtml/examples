@@ -1,3 +1,10 @@
 use rshtml::{traits::RsHtml, RsHtml};
 
-fn main() {}
+#[derive(RsHtml)]
+struct CommentPage {}
+
+fn main() {
+    let mut page = CommentPage {};
+
+    println!("{}", page.render().unwrap());
+}

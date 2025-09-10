@@ -1,4 +1,6 @@
-@extends("layout.rs.html")
+@extends("layout.rs.html") @* or just @extends *@
+
+Layout: @layout
 
 <div>
     extends content @self.value
@@ -17,3 +19,7 @@
         not escaped: @#self.for_escape
     </div>
 }
+
+@section("inline", "inline section")
+
+@render("inline")
