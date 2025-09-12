@@ -1,6 +1,9 @@
 [workspace]
-members = ["snippets"]
+members = ["snippets", "webapp"]
 resolver = "2"
 
 [workspace.dependencies]
-rshtml = "*"
+rshtml = "0.2.0"
+
+[workspace.build-dependencies]
+rshtml = "0.2.0"

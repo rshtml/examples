@@ -6,6 +6,11 @@ struct ComponentPage {
     title: String,
     data: String,
     for_escape: String,
+    items: Vec<Item>,
+}
+
+struct Item {
+    name: String,
 }
 
 fn main() {
@@ -14,6 +19,14 @@ fn main() {
         title: "Component".to_string(),
         data: "Hello".to_string(),
         for_escape: "'<script/>'".to_string(),
+        items: vec![
+            Item {
+                name: "Jack".to_string(),
+            },
+            Item {
+                name: "John".to_string(),
+            },
+        ],
     };
 
     println!("{}", page.render().unwrap());
