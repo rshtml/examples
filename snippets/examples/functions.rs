@@ -1,4 +1,4 @@
-use rshtml::{traits::RsHtml, RsHtml};
+use rshtml::{functions::*, traits::RsHtml, RsHtml};
 
 #[derive(RsHtml)]
 struct FunctionsPage {

@@ -1,4 +1,3 @@
-use highlight::*;
 use rshtml::traits::RsHtml;
 use rshtml::RsHtml;
 
@@ -16,5 +15,5 @@ fn main() {
     };
 
     let content = page.render().unwrap();
-    println!("{}", highlight(content));
+    println!("{}", content);
 }

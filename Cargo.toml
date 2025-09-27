@@ -3,7 +3,7 @@ members = ["snippets", "webapp"]
 resolver = "2"
 
 [workspace.dependencies]
-rshtml = "0.2.0"
+rshtml = { version = "0.3.0", features = ["functions"] }
 
 [workspace.build-dependencies]
-rshtml = "0.2.0"
+rshtml = "0.3.0"

@@ -2,8 +2,7 @@ use axum::Router;
 use axum::response::Html;
 use axum::routing::get;
 use chrono::{DateTime, Datelike, Utc};
-use rshtml::RsHtml;
-use rshtml::traits::RsHtml;
+use rshtml::{RsHtml,traits::RsHtml,functions::*};
 use tower_http::services::ServeDir;
 
 #[tokio::main]

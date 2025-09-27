@@ -13,3 +13,6 @@ chrono = "0.4.41"
 
 [build-dependencies]
 rshtml.workspace = true
+
+[package.metadata.rshtml]
+views = { extract_file_on_debug = true }

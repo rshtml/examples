@@ -665,37 +665,38 @@ dependencies = [
 
 [[package]]
 name = "rshtml"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "21be7d757a005d4abcb736715186430dc0a222a9e5cbd81acb3ebf844aa134f4"
+checksum = "77360e6c54aa5491fb1eb86fa3500f3d495da47746f610d8e02d088fd6431e94"
 dependencies = [
- "rshtml_core",
+ "chrono",
  "rshtml_macro",
+ "serde",
+ "serde_json",
+ "toml",
 ]
 
 [[package]]
 name = "rshtml_core"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b4775b29a27d15669b805bc1be87335a18188989040ea5a1af4da1b8769fab20"
+checksum = "fded4899dc06415e841f1b1201438f9f8534a9e6bbdbec68dfa00ff7739a996f"
 dependencies = [
  "anyhow",
- "chrono",
  "pest",
  "pest_derive",
  "proc-macro2",
  "quote",
  "serde",
- "serde_json",
  "syn",
  "toml",
 ]
 
 [[package]]
 name = "rshtml_macro"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "131eef694d7fe4df631096ac34d0cd54e3755900f3c411f93143847670990f62"
+checksum = "fb3fa7763366869dad3645a94aca9c86155a86f571b6967d0a3bc6e742fcd076"
 dependencies = [
  "rshtml_core",
  "syn",
