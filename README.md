@@ -35,6 +35,7 @@ These examples focus on teaching the fundamental features of RsHtml. Each file d
 **Run instructional examples:**
 
 ```bash
+cd snippets
 cargo run --example simple-expression
 ```
 
