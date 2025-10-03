@@ -73,7 +73,7 @@ cd examples
 
 ```bash
 cd snippets
-cargo run --example simple-expression.rs.html
+cargo run --example simple-expression
 ```
 
 3. Or run a full web application:
