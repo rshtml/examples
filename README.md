@@ -7,7 +7,7 @@ This repository contains various examples demonstrating the usage of [RsHtml](ht
 ## Directory Structure
 
 - `snippets/` – Small, educational examples that produce direct string output.
-- `webapps/` – Larger projects that demonstrate RsHtml in fully working web applications.
+- `webapp/` – Larger project that demonstrate RsHtml in fully working web application.
 
 ---
 
@@ -83,8 +83,3 @@ cargo run
 ```
 
 ---
-
-## More Information
-
-For detailed information, visit the [official RsHtml README](https://github.com/rshtml/rshtml/blob/master/README.md).
-
