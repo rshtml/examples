@@ -7,7 +7,7 @@ struct MatchPage {
 }
 
 fn main() {
-    let mut page = MatchPage {
+    let page = MatchPage {
         value: 10,
         data: Some("Hello".to_string()),
     };

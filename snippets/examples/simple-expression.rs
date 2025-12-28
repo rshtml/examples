@@ -15,7 +15,7 @@ impl SimpleExpressionPage {
 }
 
 fn main() {
-    let mut page = SimpleExpressionPage {
+    let page = SimpleExpressionPage {
         value: 10,
         data: Some("Hello".to_string()),
         for_escape: "'<script/>'".to_string(),

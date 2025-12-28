@@ -8,7 +8,7 @@ struct ParenthesesExpressionPage {
 }
 
 fn main() {
-    let mut page = ParenthesesExpressionPage {
+    let page = ParenthesesExpressionPage {
         value: 10,
         data: "Hello".to_string(),
     };

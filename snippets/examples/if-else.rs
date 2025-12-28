@@ -9,7 +9,7 @@ struct IfElsePage {
 }
 
 fn main() {
-    let mut page = IfElsePage {
+    let page = IfElsePage {
         is_ok: true,
         count: 10,
     };

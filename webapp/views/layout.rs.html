@@ -1,3 +1,7 @@
+@(navbar: Block<impl Render>, footer)
+
+@use "scripts.rs.html" as Scripts
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,13 +27,14 @@
 <body>
 
 <div class="container tm-container">
-    @render("navbar")
+    @navbar
 
-    @render_body
+    @child_content
 
-    @render("footer")
+    @#footer
 </div>
 
-@include("scripts.rs.html")
+<Scripts/>
+
 </body>
 </html>

@@ -14,7 +14,7 @@ struct Item {
 }
 
 fn main() {
-    let mut page = ComponentPage {
+    let page = ComponentPage {
         value: 10,
         title: "Component".to_string(),
         data: "Hello".to_string(),

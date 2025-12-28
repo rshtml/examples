@@ -666,8 +666,6 @@ dependencies = [
 [[package]]
 name = "rshtml"
 version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "77360e6c54aa5491fb1eb86fa3500f3d495da47746f610d8e02d088fd6431e94"
 dependencies = [
  "chrono",
  "rshtml_macro",
@@ -679,15 +677,12 @@ dependencies = [
 [[package]]
 name = "rshtml_core"
 version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fded4899dc06415e841f1b1201438f9f8534a9e6bbdbec68dfa00ff7739a996f"
 dependencies = [
  "anyhow",
  "pest",
  "pest_derive",
  "proc-macro2",
  "quote",
- "serde",
  "syn",
  "toml",
 ]
@@ -695,8 +690,6 @@ dependencies = [
 [[package]]
 name = "rshtml_macro"
 version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fb3fa7763366869dad3645a94aca9c86155a86f571b6967d0a3bc6e742fcd076"
 dependencies = [
  "rshtml_core",
  "syn",

@@ -5,6 +5,6 @@ use rshtml::{traits::RsHtml, RsHtml};
 struct CodeBlockPage {}
 
 fn main() {
-    let mut page = CodeBlockPage {};
+    let page = CodeBlockPage {};
     println!("{}", page.render().unwrap());
 }

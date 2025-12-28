@@ -6,7 +6,7 @@ struct EscapingPage {
 }
 
 fn main() {
-    let mut page = EscapingPage {
+    let page = EscapingPage {
         my_var: "<p>This is <strong>bold</strong> text.</p>".to_string(),
     };
 

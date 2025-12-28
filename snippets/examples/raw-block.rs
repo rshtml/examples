@@ -5,7 +5,7 @@ use rshtml::{traits::RsHtml, RsHtml};
 struct RawBlockPage {}
 
 fn main() {
-    let mut page = RawBlockPage {};
+    let page = RawBlockPage {};
 
     println!("{}", page.render().unwrap());
 }

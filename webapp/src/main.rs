@@ -2,7 +2,7 @@ use axum::Router;
 use axum::response::Html;
 use axum::routing::get;
 use chrono::{DateTime, Datelike, Utc};
-use rshtml::{RsHtml,traits::RsHtml,functions::*};
+use rshtml::{RsHtml, functions::*, traits::RsHtml};
 use tower_http::services::ServeDir;
 
 #[tokio::main]
@@ -16,13 +16,16 @@ async fn main() {
         .nest_service("/js", ServeDir::new("views/js"));
 
     let listener = tokio::net::TcpListener::bind("0.0.0.0:8080").await.unwrap();
-    println!("✅ Server started at http://{}", listener.local_addr().unwrap());
+    println!(
+        "✅ Server started at http://{}",
+        listener.local_addr().unwrap()
+    );
 
     axum::serve(listener, app).await.unwrap();
 }
 
 async fn index() -> Html<String> {
-    let mut index_page = IndexPage {
+    let index_page = IndexPage {
         title: "RsHtml Web Page".to_string(),
         email: "contact@rshtml.com".to_string(),
         footer: true,

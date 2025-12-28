@@ -1,4 +1,4 @@
-@extends("layout.rs.html")
+@use "layout.rs.html" as Layout;
 
 @use "components/Navbar.rs.html"
 @use "components/Home.rs.html"
@@ -6,20 +6,7 @@
 @use "components/Contact.rs.html"
 @use "components/Services.rs.html"
 
-@section navbar {
-    <Navbar/>
-}
-
-<div class="tm-page-content">
-
-    <Home title="Introduction"/>
-
-    <Services title="Our Services"/>
-
-    <About title="About our company"/>
-
-    <Contact title="Send a message"/>
-
+<Layout navbar={<Navbar/>} footer={
     @if self.footer {
         <!-- footer -->
         <footer class="row tm-footer">
@@ -38,4 +25,15 @@
 
         </footer>
     }
-</div>
+}>
+    <div class="tm-page-content">
+
+        <Home title="Introduction"/>
+
+        <Services title="Our Services"/>
+
+        <About title="About our company"/>
+
+        <Contact title="Send a message"/>
+    </div>
+</Layout>

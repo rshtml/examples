@@ -17,13 +17,10 @@ fn main() {
     println!("- for");
     println!("- functions");
     println!("- if-else");
-    println!("- include");
-    println!("- layout");
     println!("- match");
     println!("- parantheses-expression");
     println!("- raw-block");
     println!("- simple-expression");
-    println!("- while");
     println!();
     println!("Each example corresponds to a view in the 'views' directory.");
 }

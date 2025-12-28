@@ -6,7 +6,7 @@ struct ForPage {
 }
 
 fn main() {
-    let mut page = ForPage {
+    let page = ForPage {
         users: vec!["Alice".to_string(), "Bob".to_string()],
     };
     println!("{}", page.render().unwrap());

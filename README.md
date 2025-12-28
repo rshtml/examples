@@ -23,9 +23,7 @@ These examples focus on teaching the fundamental features of RsHtml. Each file d
 | `for.rs` | Demonstrates for loops (`@for`). |
 | `while.rs` | Demonstrates while loops (`@while`). |
 | `match.rs` | Demonstrates pattern matching using `@match`. |
-| `include.rs` | Shows how to include other templates. |
 | `component.rs` | Demonstrates how to use components. |
-| `layout.rs` | Shows how to use layouts with `@extends`. |
 | `functions.rs` | Demonstrates how to use built-in functions. |
 | `escaping.rs` | Shows how to escape HTML. |
 | `raw-block.rs` | Shows how to include raw HTML blocks with `@raw`. |
