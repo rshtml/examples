@@ -3,5 +3,5 @@ members = ["snippets", "webapp"]
 resolver = "2"
 
 [workspace.dependencies]
-# rshtml = { version = "0.3.0", features = ["functions"] }
-rshtml = {path = "../rshtml/rshtml", features = ["functions"]}
+rshtml = { version = "0.4.0", features = ["functions"] }
+# rshtml = {path = "../rshtml/rshtml", features = ["functions"]}

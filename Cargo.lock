@@ -665,7 +665,7 @@ dependencies = [
 
 [[package]]
 name = "rshtml"
-version = "0.3.0"
+version = "0.4.0"
 dependencies = [
  "chrono",
  "rshtml_macro",
@@ -676,7 +676,7 @@ dependencies = [
 
 [[package]]
 name = "rshtml_core"
-version = "0.3.0"
+version = "0.4.0"
 dependencies = [
  "anyhow",
  "pest",
@@ -689,7 +689,7 @@ dependencies = [
 
 [[package]]
 name = "rshtml_macro"
-version = "0.3.0"
+version = "0.4.0"
 dependencies = [
  "rshtml_core",
  "syn",
