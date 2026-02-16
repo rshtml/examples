@@ -2,7 +2,7 @@ use axum::Router;
 use axum::response::Html;
 use axum::routing::get;
 use chrono::{DateTime, Datelike, Utc};
-use rshtml::{RsHtml, functions::*, traits::RsHtml};
+use rshtml::{View, functions::*};
 use tower_http::services::ServeDir;
 
 #[tokio::main]
@@ -38,13 +38,15 @@ async fn index() -> Html<String> {
         home_time: Utc::now(),
     };
 
-    let index = index_page.render().unwrap();
+    let mut out = String::with_capacity(index_page.text_size());
 
-    Html(index)
+    index_page.render(&mut out).unwrap();
+
+    Html(out)
 }
 
-#[derive(RsHtml)]
-//#[rshtml(path = "index.rs.html")]
+#[derive(View)]
+#[view(extract/*path = "views/index.rs.html"*/)]
 struct IndexPage {
     pub title: String,
     pub email: String,

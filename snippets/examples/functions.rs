@@ -1,6 +1,6 @@
-use rshtml::{functions::*, traits::RsHtml, RsHtml};
+use rshtml::{View, functions::*};
 
-#[derive(RsHtml)]
+#[derive(View)]
 struct FunctionsPage {
     date: chrono::DateTime<chrono::Utc>,
     users: Vec<String>,
@@ -12,5 +12,8 @@ fn main() {
         users: vec!["Alice".to_string(), "Bob".to_string(), "John".to_string()],
     };
 
-    println!("{}", page.render().unwrap());
+    let mut out = String::with_capacity(page.text_size());
+
+    page.render(&mut out).unwrap();
+    println!("{}", out);
 }

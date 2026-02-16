@@ -11,15 +11,12 @@ fn main() {
     println!();
     println!("Here are the available examples:");
     println!("- code-block");
-    println!("- comment");
     println!("- component");
     println!("- escaping");
     println!("- for");
     println!("- functions");
     println!("- if-else");
-    println!("- match");
     println!("- parantheses-expression");
-    println!("- raw-block");
     println!("- simple-expression");
     println!();
     println!("Each example corresponds to a view in the 'views' directory.");

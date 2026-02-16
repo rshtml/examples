@@ -13,13 +13,7 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 
-                @match self.home_time.year() {
-                    2023 => <p class="text-xs-center tm-footer-text">Copyright &copy; 2023 RsHtml</p>,
-                    2024 => <p class="text-xs-center tm-footer-text">Copyright &copy; 2024 RsHtml</p>,
-                    2025 => <p class="text-xs-center tm-footer-text">Copyright &copy; 2025 RsHtml</p>,
-                    2026 => <p class="text-xs-center tm-footer-text">Copyright &copy; 2026 RsHtml</p>,
-                    _ =>    {<p class="text-xs-center tm-footer-text">Copyright &copy; @self.home_time.year() RsHtml</p>},
-                }
+            <p class="text-xs-center tm-footer-text">Copyright &copy; @self.home_time.year() RsHtml</p>
 
             </div>
 

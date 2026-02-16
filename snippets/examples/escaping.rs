@@ -1,6 +1,6 @@
-use rshtml::{traits::RsHtml, RsHtml};
+use rshtml::View;
 
-#[derive(RsHtml)]
+#[derive(View)]
 struct EscapingPage {
     my_var: String,
 }
@@ -10,5 +10,8 @@ fn main() {
         my_var: "<p>This is <strong>bold</strong> text.</p>".to_string(),
     };
 
-    println!("{}", page.render().unwrap());
+    let mut out = String::with_capacity(page.text_size());
+
+    page.render(&mut out).unwrap();
+    println!("{}", out);
 }

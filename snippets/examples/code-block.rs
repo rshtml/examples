@@ -1,10 +1,14 @@
-use rshtml::{traits::RsHtml, RsHtml};
+use rshtml::View;
 
-#[derive(RsHtml)]
-#[rshtml(path = "code_block.rs.html")]
+#[derive(View)]
+#[view(path = "views/code_block.rs.html")]
 struct CodeBlockPage {}
 
 fn main() {
     let page = CodeBlockPage {};
-    println!("{}", page.render().unwrap());
+
+    let mut out = String::with_capacity(page.text_size());
+
+    page.render(&mut out).unwrap();
+    println!("{}", out);
 }

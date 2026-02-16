@@ -1,4 +1,4 @@
-@(navbar: Block<impl Render>, footer)
+@(navbar: impl View, footer)
 
 @use "scripts.rs.html" as Scripts
 
@@ -31,7 +31,7 @@
 
     @child_content
 
-    @#footer
+    @footer
 </div>
 
 <Scripts/>

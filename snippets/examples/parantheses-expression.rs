@@ -1,7 +1,7 @@
-use rshtml::{traits::RsHtml, RsHtml};
+use rshtml::View;
 
-#[derive(RsHtml)]
-#[rshtml(path = "parentheses_expression.rs.html")]
+#[derive(View)]
+#[view(path = "views/parentheses_expression.rs.html")]
 struct ParenthesesExpressionPage {
     value: i32,
     data: String,
@@ -13,5 +13,8 @@ fn main() {
         data: "Hello".to_string(),
     };
 
-    println!("{}", page.render().unwrap());
+    let mut out = String::with_capacity(page.text_size());
+
+    page.render(&mut out).unwrap();
+    println!("{}", out);
 }

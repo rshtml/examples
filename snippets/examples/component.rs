@@ -1,6 +1,6 @@
-use rshtml::{traits::RsHtml, RsHtml};
+use rshtml::View;
 
-#[derive(RsHtml)]
+#[derive(View)]
 struct ComponentPage {
     value: i32,
     title: String,
@@ -29,5 +29,8 @@ fn main() {
         ],
     };
 
-    println!("{}", page.render().unwrap());
+    let mut out = String::with_capacity(page.text_size());
+
+    page.render(&mut out).unwrap();
+    println!("{}", out);
 }

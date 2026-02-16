@@ -1,8 +1,7 @@
-use rshtml::traits::RsHtml;
-use rshtml::RsHtml;
+use rshtml::View;
 
-#[derive(RsHtml)]
-#[rshtml(path = "if_else.rs.html")]
+#[derive(View)]
+#[view(path = "views/if_else.rs.html")]
 struct IfElsePage {
     is_ok: bool,
     count: i32,
@@ -14,6 +13,8 @@ fn main() {
         count: 10,
     };
 
-    let content = page.render().unwrap();
-    println!("{}", content);
+    let mut out = String::with_capacity(page.text_size());
+
+    page.render(&mut out).unwrap();
+    println!("{}", out);
 }

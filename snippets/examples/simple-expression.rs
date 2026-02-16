@@ -1,7 +1,7 @@
-use rshtml::{traits::RsHtml, RsHtml};
+use rshtml::View;
 
-#[derive(RsHtml)]
-#[rshtml(path = "simple_expression.rs.html")]
+#[derive(View)]
+#[view(path = "views/simple_expression.rs.html")]
 struct SimpleExpressionPage {
     value: i32,
     data: Option<String>,
@@ -20,5 +20,9 @@ fn main() {
         data: Some("Hello".to_string()),
         for_escape: "'<script/>'".to_string(),
     };
-    println!("{}", page.render().unwrap());
+
+    let mut out = String::with_capacity(page.text_size());
+
+    page.render(&mut out).unwrap();
+    println!("{}", out);
 }
